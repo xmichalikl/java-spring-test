@@ -1,5 +1,6 @@
 package sk.uteg.springdatatest.db.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -14,6 +15,7 @@ public class Question {
     private UUID id;
 
     @ManyToOne(optional = false)
+    @JsonBackReference
     private Campaign campaign;
 
     @Enumerated(EnumType.STRING)

@@ -12,6 +12,7 @@ public class Feedback {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
+
     @ManyToOne(optional = false)
     private Campaign campaign;
 

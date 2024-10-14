@@ -1,5 +1,6 @@
 package sk.uteg.springdatatest.db.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -13,6 +14,7 @@ public class Option {
     private UUID id;
 
     @ManyToOne(optional = false)
+    @JsonBackReference
     private Question question;
 
     private String text;
